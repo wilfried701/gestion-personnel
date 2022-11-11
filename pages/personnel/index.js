@@ -1,5 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase/config";
+import Link from "next/link";
+import { db } from "../../firebase/config";
 
 export async function getStaticProps() {
   const querySnapshot = await getDocs(collection(db, "personnel"));
@@ -29,6 +30,7 @@ export default function Personnel({ person }) {
               <th>Action</th>
             </tr>
           </thead>
+
           <tbody>
             {person.map((item) => (
               <tr key={item.id}>
@@ -46,7 +48,9 @@ export default function Personnel({ person }) {
                   </button>
                 </td>
                 <td>
-                  <button>Profil</button>
+                  <Link href={"/personnel/" + item.id}>
+                    <button>Profil</button>
+                  </Link>
                 </td>
               </tr>
             ))}
