@@ -1,35 +1,33 @@
-.personnel h1 {
+.home h1 {
   text-align: center;
   font-size: 25px;
 }
-.personnel table {
+.home table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
 }
-.personnel thead {
+.home thead {
   background: #6f73e6;
   color: white;
 }
-.personnel th {
+.home th {
   border-bottom: 1px solid rgb(219, 214, 214);
 }
-.personnel th,
-.personnel td {
+.home th,
+.home td {
   padding: 12px;
 }
-tbody button {
+.home tbody button {
   padding: 8px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-tbody .status {
+.home tbody .status {
   background: crimson;
   color: white;
-  cursor: auto;
 }
-tbody .present-status {
+.home tbody .present-status {
   background: #50c878;
-  cursor: auto;
 }
