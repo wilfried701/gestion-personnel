@@ -68,23 +68,68 @@ export default function ajouterPersonnel () {
             <h4>Jours de travail</h4>
 
             <div className='jours'>
+              <label> 
+                Lundi
+                <input 
+                  type="checkbox" 
+                  name="lundi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label>
+              <label> 
+                Mardi
+                <input 
+                  type="checkbox" 
+                  name="mardi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label>
+              <label> 
+                Mercredi
+                <input 
+                  type="checkbox" 
+                  name="mercredi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label> 
+              <label> 
+                Jeudi
+                <input 
+                  type="checkbox" 
+                  name="mercredi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label>      
 
-              <input type="checkbox" name="lundi" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> Lundi</label>
-              <input type="checkbox" name="mardi" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> mardi</label>
-              <input type="checkbox" name="mercredi" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> mercredi</label>
-              <input type="checkbox" name="jeudi" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> jeudi</label>
-              <input type="checkbox" name="vendredi" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> vendredi</label>
-              <input type="checkbox" name="samedi" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> samedi</label>    
-              <input type="checkbox" name="dimanche" onChange={e => setJourDeTravail(e.target.value)}/>
-              <label> dimanche</label>
+            </div>
 
-            </div>           
+             <div className='jour'>
+              <label> 
+                Vendredi
+                <input 
+                  type="checkbox" 
+                  name="lundi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label>
+              <label> 
+                Samedi
+                <input 
+                  type="checkbox" 
+                  name="mardi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label>
+              <label> 
+                Dimanche
+                <input 
+                  type="checkbox" 
+                  name="mercredi" 
+                  onChange={e => setJourDeTravail(e.target.value)}
+                />
+              </label>     
+
+            </div>                   
           </div>
 
 

@@ -38,10 +38,12 @@ form {
 .creer{
     background-color: #6f73e6;
 }
-.jours{
-    width: 10px;
+.jours input{
+    width: 15px;
     display: inline-block;
-    width: auto;
-    margin-top: 2em;
-    margin-right: 10px;
+}
+
+.jour input{
+    width: 15px;
+    display: inline-block;
 }
