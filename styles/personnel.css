@@ -1,0 +1,34 @@
+.personnel h1 {
+  text-align: center;
+  font-size: 25px;
+}
+.personnel table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.personnel thead {
+  background: #6f73e6;
+  color: white;
+}
+.personnel th {
+  border-bottom: 1px solid rgb(219, 214, 214);
+}
+.personnel th,
+.personnel td {
+  padding: 12px;
+}
+tbody button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+tbody .status {
+  background: crimson;
+  color: white;
+  cursor: auto;
+}
+tbody .present-status {
+  background: #50c878;
+}
