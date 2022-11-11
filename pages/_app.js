@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/ajouterPersonnel.css";
 import "../components/Header/Header.css";
 import Layout from "../components/Layout/Layout";
 
