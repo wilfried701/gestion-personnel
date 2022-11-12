@@ -151,12 +151,12 @@ export default function ajouterPersonnel() {
           </div>
 
           <div className="conges">
-            <p>du</p>
+            <p>Du</p>
             <input type="date" />
           </div>
 
           <div className="conges2">
-            <p>au</p>
+            <p>Au</p>
             <input type="date" />
           </div>
 
