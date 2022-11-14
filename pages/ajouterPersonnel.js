@@ -21,6 +21,7 @@ export default function ajouterPersonnel() {
       email: email,
       numero: telephone,
       status: "absent",
+      presences: [],
     };
     await addDoc(collection(db, "personnel"), data);
     router.push("/");

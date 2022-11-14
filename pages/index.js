@@ -1,6 +1,14 @@
-import { collection, getDocs } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore";
 import { useState } from "react";
 import { db } from "../firebase/config";
+import React from "react";
+import { useRouter } from "next/router";
 
 export async function getStaticProps() {
   const querySnapshot = await getDocs(collection(db, "personnel"));
@@ -16,6 +24,30 @@ export async function getStaticProps() {
 }
 export default function Home({ person }) {
   const [status, setStatus] = useState(false);
+  const router = useRouter();
+
+  const [cdate, setCdate] = React.useState({
+    heure: null,
+    date: null,
+  });
+
+  async function changeStatus(id) {
+    //Je recupere d'abords le document pour vérifier la valeur du status
+    const personneRef = doc(db, "personnel", id);
+    const docSnap = await getDoc(personneRef);
+
+    //je change le status dependament de la valeur qui a ete verifiée
+    if (docSnap.data().status) {
+      await updateDoc(personneRef, {
+        status: false,
+      });
+    } else {
+      await updateDoc(personneRef, {
+        status: true,
+      });
+    }
+    router.push("/");
+  }
 
   return (
     <div className="home">
@@ -39,14 +71,18 @@ export default function Home({ person }) {
                 <td>
                   <button
                     onClick={() => {
-                      console.log(status);
+                      // const date = new Date();
+                      // setCdate({
+                      //   heure: date.toDateString(),
+                      //   date: date.toLocaleTimeString(),
+                      // });
+                      changeStatus(item.id);
                     }}
-                    className={
-                      item.status === "absent" ? "status" : "present-status"
-                    }
+                    className={item.status ? "present-status" : "status"}
                   >
-                    {item.status}
-                  </button>{" "}
+                    {item.status && "present"}
+                    {!item.status && "absent"}
+                  </button>
                 </td>
               </tr>
             ))}

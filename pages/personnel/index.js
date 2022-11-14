@@ -39,12 +39,9 @@ export default function Personnel({ person }) {
                 <td>{item.numero}</td>
                 <td>{item.email}</td>
                 <td>
-                  <button
-                    className={
-                      item.status === "absent" ? "status" : "present-status"
-                    }
-                  >
-                    {item.status}
+                  <button className={item.status ? "present-status" : "status"}>
+                    {item.status && "present"}
+                    {!item.status && "absent"}
                   </button>
                 </td>
                 <td>
