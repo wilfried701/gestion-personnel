@@ -3,6 +3,9 @@ form {
   font-family: 'Raleway', sans-serif;
   margin-left: 150px;
 }
+button {
+  font-family: 'Raleway', sans-serif;
+}
 .ajouterPersonnel label,
 .ajouterPersonnel input {
   display: block;
