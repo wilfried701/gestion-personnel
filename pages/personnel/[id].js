@@ -37,7 +37,19 @@ export default function Profil({ person }) {
   return (
     <div className="profil">
       <h1>PROFIL</h1>
-      <h1>{person.nom}</h1>
+      <h2>Nom:</h2>
+      <p>{person.nom}</p>
+      <h2>Prenom:</h2>
+      <p>{person.prenom}</p>
+      <h2>Fonction:</h2>
+      <p>{person.fonction}</p>
+      <h2>numero:</h2>
+      <p>{person.numero}</p>
+      <h2>Email:</h2>
+      <p>{person.email}</p>
+      <div className="actions">
+        <button>Supprimer</button>
+      </div>
     </div>
   );
 }
